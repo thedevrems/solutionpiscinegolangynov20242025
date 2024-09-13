@@ -4,9 +4,8 @@ func Atoi(s string) int {
 	var i int
 	var positif bool = true
 	var countsignefirst int = 0
-	var positioncaractere int = 0
 
-	for _, c := range s {
+	for positioncaractere, c := range s {
 		positioncaractere++
 		if (!(c >= '0' && c <= '9')) && !(c == '+' || c == '-') || countsignefirst == 2 || (positioncaractere > 3 && (c == '+' || c == '-')) {
 			return 0
